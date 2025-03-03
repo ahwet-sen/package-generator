@@ -1,0 +1,58 @@
+{
+    "name": "ahwet-sen/package-generator",
+    "description": "Simple Package To Quickly Generate Basic Structure For Other Laravel Packages.",
+    "license": "MIT",
+    "type": "library",
+    "version": "v0.0.0",
+    "keywords": [
+        "ahwet-sen",
+        "package-generator"
+    ],
+    "authors": [
+        {
+            "name": "Ahwet Şen",
+            "email": "ahwt93sn@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/ahwet-sen/package-generator",
+    "support": {
+        "issues": "https://github.com/ahwet-sen/package-generator/issues",
+        "source": "https://github.com/ahwet-sen/package-generator"
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/config": "^12.0",
+        "illuminate/filesystem": "^12.0",
+        "illuminate/support": "^12.0",
+        "illuminate/validation": "^12.0"
+    },
+    "require-dev": {
+        "laravel/framework": "^12.0",
+        "laravel/laravel": "^12.0.1"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "AhwetSen\\PackageGenerator\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "PackageGenerator": "AhwetSen\\PackageGenerator\\PackageGeneratorFacade"
+            },
+            "providers": [
+                "AhwetSen\\PackageGenerator\\PackageGeneratorServiceProvider"
+            ]
+        }
+    }
+}
