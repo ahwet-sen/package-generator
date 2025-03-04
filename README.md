@@ -1,6 +1,6 @@
 [
     <p align="center">
-        <img src="https://banners.beyondco.de/package-generator.png?theme=light&packageManager=composer+require&packageName=ahwet-sen%2Fpackage-generator&pattern=architect&style=style_1&description=Simple+Package+To+Quickly+Generate+Basic+Structure+For+Other+Laravel+Packages.&md=1&showWatermark=0&fontSize=175px&images=https://raw.githubusercontent.com/laravel/art/d5f5e725c27f877ed032225fe0b00afee9337d0f/laravel-logo.svg" alt="package-generator">
+        <img src="https://banners.beyondco.de/package-generator.png?theme=light&packageManager=composer+require&packageName=ahwet-sen%2Fpackage-generator&pattern=architect&style=style_1&description=Simple+Package+To+Quickly+Generate+Basic+Structure+For+Other+Laravel+Packages.&md=1&showWatermark=0&fontSize=175px&images=code" alt="package-generator">
     </p>
 ](https://github.com/ahwet-sen/package-generator)
 
