@@ -17,10 +17,11 @@ jobs:
       - name: Setup PHP With Tools
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2.1'
+          php-version: '8.3'
+          extensions: zip
           tools: composer:v2
 
-      - name: Install Dependencies
+      - name: Install Composer Dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: Install Phpstan Globally
