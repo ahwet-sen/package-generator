@@ -1,6 +1,7 @@
 <?php
 
 use AhwetSen\PackageGenerator\PackageGenerator;
+use Illuminate\Support\Str;
 
 if (! function_exists('packageName')) {
     /**
