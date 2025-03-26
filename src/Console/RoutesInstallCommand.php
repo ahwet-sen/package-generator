@@ -40,6 +40,6 @@ class RoutesInstallCommand extends Command
             unset($allFile);
         }
 
-        $this->info('The route file publishing process has been successfully completed.');
+        $this->info('The routes files publishing process has been successfully completed.');
     }
 }
