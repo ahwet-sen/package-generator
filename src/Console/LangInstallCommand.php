@@ -35,7 +35,7 @@ class LangInstallCommand extends Command
     protected function lang(): void
     {
         if ((new Filesystem)->exists(base_path('lang'))) {
-            foreach (configValue('supported_languages') as $supportedLanguage) {
+            foreach (supportedLanguages() as $supportedLanguage) {
                 if (! (new Filesystem)->exists(base_path('lang/'.$supportedLanguage))) {
                     (new Filesystem)->makeDirectory(base_path('lang/'.$supportedLanguage));
                 }

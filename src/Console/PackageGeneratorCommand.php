@@ -4,6 +4,7 @@ namespace AhwetSen\PackageGenerator\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Str;
 
 class PackageGeneratorCommand extends Command
 {
@@ -111,10 +112,10 @@ class PackageGeneratorCommand extends Command
      */
     protected function seperator(): string
     {
-        return match (configValue('seperator')) {
-            'dashed' => '------------------------------------------------------------------------------------------------------------------------------------------------------',
-            'dotted' => '......................................................................................................................................................',
-            default => '======================================================================================================================================================',
+        return match (seperator()) {
+            'dashed' => Str::repeat('-', seperatorLength()),
+            'dotted' => Str::repeat('.', seperatorLength()),
+            default => Str::repeat('=', seperatorLength()),
         };
     }
 
@@ -605,7 +606,7 @@ class PackageGeneratorCommand extends Command
 
         (new Filesystem)->makeDirectory($this->packageProperties['to']['path'].'/'.$mainFolderName);
 
-        foreach (configValue('supported_languages') as $supportedLanguage) {
+        foreach (supportedLanguages() as $supportedLanguage) {
             if ((new Filesystem)->exists($this->packageProperties['to']['path'].'/'.$mainFolderName.'/'.$supportedLanguage)) {
                 (new Filesystem)->deleteDirectory($this->packageProperties['to']['path'].'/'.$mainFolderName.'/'.$supportedLanguage);
             }

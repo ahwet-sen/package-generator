@@ -1,6 +1,7 @@
 <?php
 
 use AhwetSen\PackageGenerator\PackageGenerator;
+use Illuminate\Support\Str;
 
 if (! function_exists('packageName')) {
     /**
@@ -49,6 +50,42 @@ if (! function_exists('assetPath')) {
     function assetPath(string $assetFileName = 'images/favicon.ico'): string
     {
         return PackageGenerator::assetPath($assetFileName);
+    }
+}
+
+if (! function_exists('supportedLanguages')) {
+    /**
+     * Supported languages.
+     */
+    function supportedLanguages(): mixed
+    {
+        return configValue('supported_languages');
+    }
+}
+
+if (! function_exists('optimizationCommands')) {
+    /**
+     * Optimization commands.
+     */
+    function optimizationCommands(): mixed
+    {
+        return configValue('optimization_commands');
+    }
+}
+
+if (! function_exists('packageCommands')) {
+    /**
+     * Package commands.
+     */
+    function packageCommands(?string $packageCommandKey = null): mixed
+    {
+        if ($packageCommandKey === null) {
+            return configValue('package_commands');
+        }
+
+        $packageCommandKey = Str::of($packageCommandKey)->trim()->lower()->snake();
+
+        return configValue('package_commands.'.$packageCommandKey);
     }
 }
 
