@@ -53,6 +53,22 @@ if (! function_exists('assetPath')) {
     }
 }
 
+if (! function_exists('packageInformation')) {
+    /**
+     * Package information.
+     */
+    function packageInformation(?string $packageInformationKey = null): mixed
+    {
+        if ($packageInformationKey === null) {
+            return configValue('package_information');
+        }
+
+        $packageInformationKey = Str::of($packageInformationKey)->trim()->lower()->snake();
+
+        return configValue('package_information.'.$packageInformationKey);
+    }
+}
+
 if (! function_exists('supportedLanguages')) {
     /**
      * Supported languages.
