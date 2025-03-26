@@ -62,6 +62,22 @@ if (! function_exists('supportedLanguages')) {
     }
 }
 
+if (! function_exists('packageCommands')) {
+    /**
+     * Package commands.
+     */
+    function packageCommands(?string $packageCommandKey = null): mixed
+    {
+        if ($packageCommandKey === null) {
+            return configValue('package_commands');
+        }
+
+        $packageCommandKey = Str::of($packageCommandKey)->trim()->lower()->snake();
+
+        return configValue('package_commands.'.$packageCommandKey);
+    }
+}
+
 if (! function_exists('seperator')) {
     /**
      * Seperator.
