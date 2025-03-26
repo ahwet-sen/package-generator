@@ -52,6 +52,16 @@ if (! function_exists('assetPath')) {
     }
 }
 
+if (! function_exists('supportedLanguages')) {
+    /**
+     * Supported languages.
+     */
+    function supportedLanguages(): mixed
+    {
+        return configValue('supported_languages');
+    }
+}
+
 if (! function_exists('seperator')) {
     /**
      * Seperator.
