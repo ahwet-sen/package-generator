@@ -36,6 +36,6 @@ class AssetsInstallCommand extends Command
     {
         (new Filesystem)->copyDirectory(__DIR__.'/../../assets', public_path('package-generator'));
 
-        $this->info('The asset file publishing process has been successfully completed.');
+        $this->info('The assets files publishing process has been successfully completed.');
     }
 }
