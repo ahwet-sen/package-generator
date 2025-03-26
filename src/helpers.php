@@ -63,6 +63,16 @@ if (! function_exists('supportedLanguages')) {
     }
 }
 
+if (! function_exists('optimizationCommands')) {
+    /**
+     * Optimization commands.
+     */
+    function optimizationCommands(): mixed
+    {
+        return configValue('optimization_commands');
+    }
+}
+
 if (! function_exists('packageCommands')) {
     /**
      * Package commands.
