@@ -66,7 +66,7 @@ class InstallCommand extends Command
      */
     protected function startInstallation(): void
     {
-        foreach (configValue('package_commands') as $packageCommand => $status) {
+        foreach (packageCommands() as $packageCommand => $status) {
             if ($status) {
                 $this->call('package-generator:'.$packageCommand.'-install');
 
