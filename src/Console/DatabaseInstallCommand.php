@@ -38,7 +38,7 @@ class DatabaseInstallCommand extends Command
 
         $this->seeders();
 
-        $this->info('The database file publishing process has been successfully completed.');
+        $this->info('The database files publishing process has been successfully completed.');
     }
 
     /**
