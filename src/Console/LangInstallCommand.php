@@ -52,6 +52,6 @@ class LangInstallCommand extends Command
             (new Filesystem)->copyDirectory(__DIR__.'/../../lang', base_path('lang'));
         }
 
-        $this->info('The language file publishing process has been successfully completed.');
+        $this->info('The language files publishing process has been successfully completed.');
     }
 }
