@@ -43,7 +43,7 @@ class PackageGenerator
      */
     public static function viewPath(string $viewFileName = 'pages.home.index'): string
     {
-        return $this->packageName().'.'.$viewFileName;
+        return self::packageName().'.'.$viewFileName;
     }
 
     /**
@@ -51,6 +51,6 @@ class PackageGenerator
      */
     public static function assetPath(string $assetFileName = 'images/favicon.ico'): string
     {
-        return asset($this->packageName().'/'.$assetFileName);
+        return asset(self::packageName().'/'.$assetFileName);
     }
 }
