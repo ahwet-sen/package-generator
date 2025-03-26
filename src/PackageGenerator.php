@@ -17,7 +17,7 @@ class PackageGenerator
     /**
      * Package name.
      */
-    public function packageName(): string
+    public static function packageName(): string
     {
         return self::PACKAGE_NAME;
     }
@@ -25,7 +25,7 @@ class PackageGenerator
     /**
      * Package version.
      */
-    public function packageVersion(): string
+    public static function packageVersion(): string
     {
         return self::PACKAGE_VERSION;
     }
@@ -33,24 +33,24 @@ class PackageGenerator
     /**
      * Config value.
      */
-    public function configValue(string $configKeyName = 'package_information.name'): mixed
+    public static function configValue(string $configKeyName = 'package_information.name'): mixed
     {
-        return config($this->packageName().'.'.$configKeyName);
+        return config(self::packageName().'.'.$configKeyName);
     }
 
     /**
      * View path.
      */
-    public function viewPath(string $viewFileName = 'pages.home.index'): string
+    public static function viewPath(string $viewFileName = 'pages.home.index'): string
     {
-        return $this->packageName().'.'.$viewFileName;
+        return self::packageName().'.'.$viewFileName;
     }
 
     /**
      * Asset path.
      */
-    public function assetPath(string $assetFileName = 'images/favicon.ico'): string
+    public static function assetPath(string $assetFileName = 'images/favicon.ico'): string
     {
-        return asset($this->packageName().'/'.$assetFileName);
+        return asset(self::packageName().'/'.$assetFileName);
     }
 }

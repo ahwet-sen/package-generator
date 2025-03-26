@@ -1,12 +1,14 @@
 <?php
 
+use AhwetSen\PackageGenerator\PackageGenerator;
+
 if (! function_exists('packageName')) {
     /**
      * Package name.
      */
-    function packageName(): mixed
+    function packageName(): string
     {
-        return app('package-generator')->packageName();
+        return PackageGenerator::packageName();
     }
 }
 
@@ -14,9 +16,9 @@ if (! function_exists('packageVersion')) {
     /**
      * Package version.
      */
-    function packageVersion(): mixed
+    function packageVersion(): string
     {
-        return app('package-generator')->packageVersion();
+        return PackageGenerator::packageVersion();
     }
 }
 
@@ -26,7 +28,7 @@ if (! function_exists('configValue')) {
      */
     function configValue(string $configKeyName = 'package_information.name'): mixed
     {
-        return app('package-generator')->configValue($configKeyName);
+        return PackageGenerator::configValue($configKeyName);
     }
 }
 
@@ -36,7 +38,7 @@ if (! function_exists('viewPath')) {
      */
     function viewPath(string $viewFileName = 'pages.home.index'): string
     {
-        return app('package-generator')->viewPath($viewFileName);
+        return PackageGenerator::viewPath($viewFileName);
     }
 }
 
@@ -44,9 +46,9 @@ if (! function_exists('assetPath')) {
     /**
      * Asset path.
      */
-    function assetPath(string $assetFileName = 'images/favicon.ico'): mixed
+    function assetPath(string $assetFileName = 'images/favicon.ico'): string
     {
-        return app('package-generator')->assetPath($assetFileName);
+        return PackageGenerator::assetPath($assetFileName);
     }
 }
 
