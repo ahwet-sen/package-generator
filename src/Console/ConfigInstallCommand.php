@@ -36,6 +36,6 @@ class ConfigInstallCommand extends Command
     {
         (new Filesystem)->copy(__DIR__.'/../../config/package-generator.php', config_path('package-generator.php'));
 
-        $this->info('The configuration file publishing process has been successfully completed.');
+        $this->info('The config files publishing process has been successfully completed.');
     }
 }
