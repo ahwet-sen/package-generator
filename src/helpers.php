@@ -49,3 +49,23 @@ if (! function_exists('assetPath')) {
         return app('package-generator')->assetPath($assetFileName);
     }
 }
+
+if (! function_exists('seperator')) {
+    /**
+     * Seperator.
+     */
+    function seperator(): mixed
+    {
+        return configValue('seperator');
+    }
+}
+
+if (! function_exists('seperatorLength')) {
+    /**
+     * Seperator length.
+     */
+    function seperatorLength(): mixed
+    {
+        return configValue('seperator_length');
+    }
+}
