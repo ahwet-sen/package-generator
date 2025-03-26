@@ -38,7 +38,7 @@ class DatabaseInstallCommand extends Command
 
         $this->seeders();
 
-        $this->info('The database file publishing process has been successfully completed.');
+        $this->info('The database files publishing process has been successfully completed.');
     }
 
     /**
@@ -52,7 +52,7 @@ class DatabaseInstallCommand extends Command
             unset($allFile);
         }
 
-        $this->info('The migration file publishing process has been successfully completed.');
+        $this->info('The migrations files publishing process has been successfully completed.');
     }
 
     /**
@@ -66,6 +66,6 @@ class DatabaseInstallCommand extends Command
             unset($allFile);
         }
 
-        $this->info('The seed file publishing process has been successfully completed.');
+        $this->info('The seeders files publishing process has been successfully completed.');
     }
 }

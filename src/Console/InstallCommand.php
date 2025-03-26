@@ -3,6 +3,7 @@
 namespace AhwetSen\PackageGenerator\Console;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Str;
 
 class InstallCommand extends Command
 {
@@ -53,10 +54,10 @@ class InstallCommand extends Command
      */
     protected function seperator(): string
     {
-        return match (configValue('seperator')) {
-            'dashed' => '------------------------------------------------------------------------------------------------------------------------------------------------------',
-            'dotted' => '......................................................................................................................................................',
-            default => '======================================================================================================================================================',
+        return match (seperator()) {
+            'dashed' => Str::repeat('-', seperatorLength()),
+            'dotted' => Str::repeat('.', seperatorLength()),
+            default => Str::repeat('=', seperatorLength()),
         };
     }
 

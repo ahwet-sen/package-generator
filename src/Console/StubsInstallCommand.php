@@ -35,6 +35,6 @@ class StubsInstallCommand extends Command
     {
         //
 
-        $this->info('The stub file publishing process has been successfully completed.');
+        $this->info('The stubs files publishing process has been successfully completed.');
     }
 }

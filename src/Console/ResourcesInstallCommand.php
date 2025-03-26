@@ -36,7 +36,7 @@ class ResourcesInstallCommand extends Command
     {
         $this->views();
 
-        $this->info('The resource file publishing process has been successfully completed.');
+        $this->info('The resources files publishing process has been successfully completed.');
     }
 
     /**
@@ -46,6 +46,6 @@ class ResourcesInstallCommand extends Command
     {
         (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views', resource_path('views/package-generator'));
 
-        $this->info('The view file publishing process has been successfully completed.');
+        $this->info('The views files publishing process has been successfully completed.');
     }
 }
