@@ -21,6 +21,9 @@ jobs:
           extensions: zip
           tools: composer:v2
 
+      - name: Set Permissions for Vendor Directory
+        run: sudo chmod -R 777 /home/runner/work/package-generator/package-generator/vendor
+
       - name: Install Composer Dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
