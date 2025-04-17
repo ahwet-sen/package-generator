@@ -89,6 +89,6 @@ return [
     |
     */
 
-    'seperator_length' => 180,
+    'seperator_length' => 210,
 
 ];
