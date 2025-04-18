@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AhwetSen\PackageGenerator\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 
-class PackageGeneratorCommand extends Command
+final class PackageGeneratorCommand extends Command
 {
     /**
      * The name and signature of the console command.
@@ -671,7 +673,7 @@ class PackageGeneratorCommand extends Command
 
             (new Filesystem)->makeDirectory($this->packageProperties['to']['path'].'/'.$mainFolderName.'/'.$folderName);
 
-            if ($subFolderName != '') {
+            if ($subFolderName !== '') {
                 foreach ($subFolderName as $subFolder => $item) {
                     if ((new Filesystem)->exists($this->packageProperties['to']['path'].'/'.$mainFolderName.'/'.$folderName.'/'.$subFolder)) {
                         (new Filesystem)->deleteDirectory($this->packageProperties['to']['path'].'/'.$mainFolderName.'/'.$folderName.'/'.$subFolder);
@@ -679,7 +681,7 @@ class PackageGeneratorCommand extends Command
 
                     (new Filesystem)->makeDirectory($this->packageProperties['to']['path'].'/'.$mainFolderName.'/'.$folderName.'/'.$subFolder);
 
-                    if ($item != '') {
+                    if ($item !== '') {
                         foreach ($item as $v) {
                             if ((new Filesystem)->exists($this->packageProperties['to']['path'].'/'.$mainFolderName.'/'.$folderName.'/'.$subFolder.'/'.$v)) {
                                 (new Filesystem)->deleteDirectory($this->packageProperties['to']['path'].'/'.$mainFolderName.'/'.$folderName.'/'.$subFolder.'/'.$v);

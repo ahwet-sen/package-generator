@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AhwetSen\PackageGenerator\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 
-class InstallCommand extends Command
+final class InstallCommand extends Command
 {
     /**
      * The name and signature of the console command.
