@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AhwetSen\PackageGenerator;
 
 use Illuminate\Support\ServiceProvider;
 
-class PackageGeneratorServiceProvider extends ServiceProvider
+final class PackageGeneratorServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.

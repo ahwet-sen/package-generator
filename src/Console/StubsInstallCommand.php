@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AhwetSen\PackageGenerator\Console;
 
 use Illuminate\Console\Command;
 
-class StubsInstallCommand extends Command
+final class StubsInstallCommand extends Command
 {
     /**
      * The name and signature of the console command.

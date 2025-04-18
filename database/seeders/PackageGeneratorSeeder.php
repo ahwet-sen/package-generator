@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class PackageGeneratorSeeder extends Seeder
+final class PackageGeneratorSeeder extends Seeder
 {
     /**
      * Run the database seeds.

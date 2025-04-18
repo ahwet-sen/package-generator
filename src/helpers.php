@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use AhwetSen\PackageGenerator\PackageGenerator;
 use Illuminate\Support\Str;
 
