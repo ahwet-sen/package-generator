@@ -10,6 +10,7 @@ return RectorConfig::configure()
         AddOverrideAttributeToOverriddenMethodsRector::class,
     ])
     ->withPaths([
+        __DIR__.'/assets',
         __DIR__.'/config',
         __DIR__.'/database',
         __DIR__.'/lang',
