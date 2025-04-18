@@ -75,6 +75,8 @@ final class PackageGeneratorCommand extends Command
         'provider_class' => '21 -> Copying the src/PackageGeneratorServiceProvider.php file into the new package directory has been completed successfully.',
         'helpers' => '22 -> Copying the src/helpers.php file into the new package directory has been completed successfully.',
         'stubs' => '23 -> Copying the stubs directory into the package directory has been completed successfully.',
+        'pint' => '24 -> Copying the pint.json file into the package directory has been completed successfully.',
+        'rector' => '25 -> Copying the rector.php file into the package directory has been completed successfully.',
     ];
 
     /**
@@ -207,6 +209,10 @@ final class PackageGeneratorCommand extends Command
         $this->src();
 
         $this->stubs();
+
+        $this->pint();
+
+        $this->rector();
     }
 
     /**
@@ -955,6 +961,34 @@ final class PackageGeneratorCommand extends Command
         $this->writeln($this->seperator());
     }
 
+    /**
+     * Pint.
+     */
+    protected function pint(): void
+    {
+        $fileName = 'pint.json';
+
+        $this->checkPackageFiles($fileName, $fileName);
+
+        $this->info($this->defaultMessages['pint']);
+
+        $this->writeln($this->seperator());
+    }
+
+    /**
+     * Rector.
+     */
+    protected function rector(): void
+    {
+        $fileName = 'rector.php';
+
+        $this->checkPackageFiles($fileName, $fileName);
+
+        $this->info($this->defaultMessages['rector']);
+
+        $this->writeln($this->seperator());
+    }
+    
     /**
      * Check package files.
      */
