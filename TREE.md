@@ -6,6 +6,7 @@
 │  │  └─ config.yml
 │  ├─ dependabot.yml
 │  └─ workflows
+│     ├─ code-quality.yml
 │     ├─ dependabot-auto-merge.yml
 │     ├─ fix-php-code-style.yml
 │     ├─ normalize-composer-json.yml
@@ -34,6 +35,8 @@
 │  │  └─ package-generator.php
 │  └─ tr
 │     └─ package-generator.php
+├─ pint.json
+├─ rector.php
 ├─ resources
 │  └─ views
 │     └─ pages
