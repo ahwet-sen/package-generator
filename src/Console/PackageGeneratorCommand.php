@@ -988,7 +988,7 @@ final class PackageGeneratorCommand extends Command
 
         $this->writeln($this->seperator());
     }
-    
+
     /**
      * Check package files.
      */
