@@ -1,0 +1,29 @@
+name: Code Quality
+
+on: [pull_request]
+
+jobs:
+  code-quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP With Tools
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: dom, curl, libxml, mbstring, zip, pdo, xml, bcmath, intl
+          coverage: none
+          tools: composer:v2
+
+      - name: Install Composer Dependencies
+        run: composer install --prefer-dist --no-progress
+
+      - name: Run Laravel Pint (Formatter)
+        run: ./vendor/bin/pint
+
+      - name: Run Rector (Code Refactor Check)
+        run: ./vendor/bin/rector
