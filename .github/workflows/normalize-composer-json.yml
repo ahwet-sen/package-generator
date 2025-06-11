@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          ref: main  # Replace 'main' with the target branch you want to commit to
 
       - name: Normalize Composer.json
         run: |
