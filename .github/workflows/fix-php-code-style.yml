@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }} # Ensure the PR branch is checked out.
 
       - name: Set User
         run: |
