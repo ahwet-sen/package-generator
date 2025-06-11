@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }} # Ensure the PR branch is checked out.
 
       - name: Set User
         run: |
@@ -22,6 +24,6 @@ jobs:
         uses: aglipanci/laravel-pint-action@latest
 
       - name: Commit Changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: Fix Styling
