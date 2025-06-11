@@ -9,7 +9,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }} # Ensure the PR branch is checked out.
+          ref: ${{ github.head_ref }} # Ensure the branch is checked out instead of a detached HEAD
 
       - name: Normalize Composer.json
         run: |
