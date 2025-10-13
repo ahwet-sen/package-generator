@@ -56,7 +56,7 @@ none
 **_Which database will your application use?_**
 
 ```bash
-mysql
+sqlite
 
 ```
 
