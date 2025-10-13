@@ -60,13 +60,6 @@ sqlite
 
 ```
 
-**_Default database updated. Would you like to run the default database migrations?_**
-
-```bash
-yes
-
-```
-
 **_Would you like to run npm install and npm run build?_**
 
 ```bash
