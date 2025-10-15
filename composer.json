@@ -29,8 +29,8 @@
     },
     "require-dev": {
         "laravel/framework": "^12.0",
-        "laravel/laravel": "^12.6.0",
-        "laravel/pint": "^1.22.0",
+        "laravel/laravel": "^12.7.0",
+        "laravel/pint": "^1.25.1",
         "rector/rector": "^2.0.11"
     },
     "minimum-stability": "stable",
