@@ -53,6 +53,13 @@ none
 
 ```
 
+**_Do you want to install Laravel Boost to improve AI assisted coding?_**
+
+```bash
+no
+
+```
+
 **_Which database will your application use?_**
 
 ```bash
